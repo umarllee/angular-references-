@@ -1,1 +1,164 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+nav {
+  background-color: rgb(24, 87, 129);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+
+}
+
+.nav-bar {
+  animation: inactive 1s;
+  width: 15%;
+}
+
+@keyframes inactive {
+
+  0% {
+    width: 4%;
+  }
+
+  100% {
+    width: 15%;
+  }
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+.listUL {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.listUL li {
+  font-size: 17px;
+  list-style: none;
+  // display: flex;
+  // align-items: center;
+  cursor: pointer;
+
+}
+
+.logoNav {
+  color: #fca10f;
+  animation: isSpan 1s;
+}
+
+.nav-bar .downChevron {
+  position: absolute;
+  display: inline-block;
+  margin-left: 9%;
+  animation: isSpan 1s;
+}
+
+
+nav ul li span {
+  position: absolute;
+  animation: isSpan 3s;
+}
+
+@keyframes isSpan {
+
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+.tooltip-style {
+  color: #fca10f !important;
+  background-color: rgb(241, 241, 241);
+}
+
+.active {
+
+  width: 4%;
+  animation: notActive 1s;
+
+}
+
+@keyframes notActive {
+
+  0% {
+    width: 15%;
+  }
+
+  100% {
+    width: 4%;
+  }
+}
+
+.active span {
+  position: absolute;
+  display: none;
+}
+
+.active .logoNav {
+  margin: 0 auto;
+}
+
+// .active .logoNav {
+//   width: 2rem;
+//   height: 2rem;
+// }
+
+.active .downChevron {
+  display: none;
+}
+
+.subNavOpen {
+  animation: subNavigationOpen 0.5s ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes subNavigationOpen {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.subNavClose {
+  // display: none;
+  transform: scaleY(0);
+  max-height: 0;
+  animation: subNavigationClose 0.5s ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes subNavigationClose {
+  0% {
+    transform: scaleY(1);
+    visibility: visible;
+  }
+
+  100% {
+    transform: scaleY(0);
+    visibility: hidden;
+  }
+}
+
+li{
+  padding: 10px;
+}
