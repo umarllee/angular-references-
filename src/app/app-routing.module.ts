@@ -5,7 +5,11 @@ import { Sidebar2Component } from './sidebar2/sidebar2.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent },
-  {path: 'sidebar2', component: Sidebar2Component }
+  {path: 'sidebar2', component: Sidebar2Component, children:[
+    {path: 'sidebar2/home', component: HomeComponent},
+    {path: 'sidebar2/sidebar', component: Sidebar2Component},
+  ] },
+  
 ];
 
 @NgModule({
