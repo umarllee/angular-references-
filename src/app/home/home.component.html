@@ -9,7 +9,6 @@
         </svg>
         <span  class="mt-1">Home</span>
 
-
       </div>
     </li>
 
@@ -30,7 +29,7 @@
         </svg>
       </div>
 
-      <ul class="  ps-3" *ngIf = "isSubNavClose" [ngClass]="{'subNavOpen': isSubNavClose , 'subNavClose': !isSubNavClose }">
+      <ul class="  ps-3"  [ngClass]="{'subNavOpen': isSubNavClose , 'subNavClose': !isSubNavClose }">
         <li class="mt-2">
           <svg style="color: #fca10f;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class=" bi bi-list me-3"
             viewBox="0 0 16 16">

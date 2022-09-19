@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   isSubNavClose = false;
   isSubnav = true;
 
-
   constructor() { }
 
   ngOnInit(): void {

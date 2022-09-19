@@ -124,7 +124,16 @@ nav ul li span {
   display: none;
 }
 
+.subnavNone {
+  display: none;
+}
+
 .subNavOpen {
+  visibility: visible;
+  opacity: 1;
+  max-height: 1000px;
+  // display: block;
+  transition: all .1s ease;
   animation: subNavigationOpen 0.5s ease-in-out;
   transform-origin: top;
 }
@@ -142,7 +151,7 @@ nav ul li span {
 .subNavClose {
   // display: none;
   transform: scaleY(0);
-  max-height: 0;
+  max-height: 0px;
   animation: subNavigationClose 0.5s ease-in-out;
   transform-origin: top;
 }
@@ -150,15 +159,17 @@ nav ul li span {
 @keyframes subNavigationClose {
   0% {
     transform: scaleY(1);
-    visibility: visible;
+    opacity: 1;
+    // visibility: visible;
   }
 
   100% {
     transform: scaleY(0);
-    visibility: hidden;
+    opacity: 0;
+    // visibility: hidden;
   }
 }
 
-li{
+li {
   padding: 10px;
 }

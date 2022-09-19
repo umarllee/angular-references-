@@ -6,11 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { NgxSpinner, NgxSpinnerModule } from 'ngx-spinner';
+import { Sidebar2Component } from './sidebar2/sidebar2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    Sidebar2Component
   ],
   imports: [
     BrowserModule,
